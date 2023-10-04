@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\Auth\RegistrationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-// Route::get('/', function(){
-//     echo 'Data';
-// });
+Route::get('/', [RegistrationController::class, 'index']);

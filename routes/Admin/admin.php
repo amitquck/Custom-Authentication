@@ -13,4 +13,4 @@ use App\Http\Controllers\Admin\Auth\RegistrationController;
 |
 */
 
-Route::get('/', [RegistrationController::class, 'index']);
+// Route::get('/', [RegistrationController::class, 'index']);

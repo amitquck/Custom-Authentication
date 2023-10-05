@@ -12,7 +12,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        return view('Admin.Auth.registration');
+        // return view('Admin.Auth.registration');
     }
 
     /**

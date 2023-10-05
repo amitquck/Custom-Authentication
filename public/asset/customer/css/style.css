@@ -1,0 +1,168 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container
+{
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px  0 10px rgba(0,0,0,0.2);
+}
+.container .form-header
+{
+    width: 100%;
+    background: #2f3542;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.container .form_body form
+{
+    width: 100%;
+    padding: 20px;
+}
+
+.container .form_body form .row
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .form_body form .row .input_container1,
+.container .form_body form .row .input_container2
+{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+
+.container .form_body form .row .input_container1 .lable_text label,
+.container .form_body form .row .input_container2 .lable_text label
+{
+    /* color: #2f3542; */
+    color:  #fff;
+    display: none;
+}
+
+.container .form_body form .row .input_container1 .input_box,
+.container .form_body form .row .input_container2 .input_box
+{
+    margin-top: 10px;
+}
+
+/* Target input elements of type "text" inside .input_container1 and .input_container2 */
+.container .form_body form .row .input_container1 .input_box input[type="text"],
+.container .form_body form .row .input_container2 .input_box input[type="email"],
+.container .form_body form .row .input_container2 .input_box input[type="password"] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background: none;
+    border: none;
+    border: 2px solid #2f3542;
+    /* border-bottom: 2px solid #2f3542; */
+    /* border-radius: 5px; */
+    padding: 0 10px;
+    transition: 0.5s ease-in-out all;
+}
+.container .form_body form .row .input_container1 .input_box input[type="text"]:focus,
+.container .form_body form .row .input_container2 .input_box input[type="email"]:focus,
+.container .form_body form .row .input_container2 .input_box input[type="password"]:focus {
+
+    border: 2px solid #fff;
+    padding: 0 10px;
+}
+
+/* Target input elements of type "email" inside .input_container1 and .input_container2 */
+/* .container .form_body form .row .input_container1 .input_box input[type="email"],
+.container .form_body form .row .input_container2 .input_box input[type="email"] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    padding: 0 10px;
+} */
+
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+border-radius: 4px;
+border: 2px solid royalblue;
+height: 40px;
+cursor: pointer;
+background-color: white;
+border: 1px solid rgba(0, 0, 0, 0.16);
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+margin-right: 16px;
+transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+background-color: #e5e7eb;
+}
+
+.container .form_body form .row .input_container1 .input_box input::placeholder,
+.container .form_body form .row .input_container2 .input_box input::placeholder
+{
+    color: rgba(216, 213, 213, 0.764);
+}
+.input_container3
+{
+    margin-top: 10px;
+}
+button
+{
+    font-size: 20px;
+    padding: 10px 30px;
+    /* background: #2f3542; */
+    background: none;
+    outline: none;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    position: relative;
+    z-index: 99999;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+}
+button::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #2f3542;
+    z-index: -1;
+    transition: 0.5s all ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover::before
+{
+    width: 100%;
+}
